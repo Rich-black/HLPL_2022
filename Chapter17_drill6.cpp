@@ -1,12 +1,12 @@
 #include "std_lib_facilities.h"
-//1,4
+//1,4 Allocate an array of ten ints on the free store using new
 void print_array10(ostream& os, int* a)
 {
     for(int i = 0; i < 10; ++i)
         os<< a[i]<<" ";
     cout<<endl;
 }
-//1,7
+//1,7  Print the values of the ten ints to cout.
 void print_array(ostream& os, int* a, int n)
 {
     for(int i = 0; i < n; ++i)
@@ -23,13 +23,13 @@ void print_vector(ostream& os, vector<int> v)
 
 
 int main() {
-    //1,1
+    //1,1  Write a function print_array10
     int* a1 =new int [10] {1,2,3,4,5,6,7,8,9,10};
     //1,2
     for(int i=0;i<10; ++i)
         cout << a1[i]<<" ";
     cout<<endl;
-    //1,3
+    //1,3using delete 
     delete [] a1;
     //1,5
     int* a5 = new int[10];
@@ -52,7 +52,7 @@ int main() {
         a8[i] = 100+i;
     print_array (cout, a8, 20);
     delete [] a8;
-    //10 (vector 5,6,8)
+    //10 (vector 5,6,8)Do 5, 6, and 8 using a vector instead of an array and a print_vector()
     vector<int> v5;
     for(int i=0;i<10;++i)
         v5.push_back(100+i);
@@ -72,10 +72,10 @@ int main() {
     v8.clear();
 //-------------second part-----------
     cout<<"-------------second part-----------"<<endl;
-//2,1
+//2,1 Allocate an int, initialize it to 7, and assign its address to a variable p1.
     int b1 = 7;
     int* p1 = &b1;
-//2,2
+//2,2  Print out the value of p1 and of the int it points to.
     cout<<"*p1: "<<*p1<<endl;
     cout<<"p1: "<<p1<<endl;
 //2,3
@@ -88,7 +88,7 @@ int main() {
     print_array(cout, p2, 7);
 //2,5
     int* p3 = p2;
-//2,6
+//2,6 
     p2 = p1;
 //2,7
     p2 = p3;
